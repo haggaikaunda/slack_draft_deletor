@@ -7,12 +7,6 @@ function getNumberOfDrafts() {
   return parseInt(draftsText.split(" ")[0])
 }
 
-function getTrashButtons() {
-  if (draftsText() > 0) {
-    return Array.from(document.querySelectorAll("[aria-label='Delete draft']"));
-  }
-}
-
 async function deleteAllDrafts() {
 
   while (getNumberOfDrafts() > 0) {

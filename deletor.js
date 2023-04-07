@@ -3,8 +3,9 @@ async function sleep(millis) {
 }
 
 function getNumberOfDrafts() {
-  const draftsText = document.querySelector("[class='p-ia__view_header__subtitle']").textContent // n drafts
-  return parseInt(draftsText.split(" ")[0])
+  const draftsText = 
+document.querySelector("button[id='drafts'] span[data-qa='tabs_item_render_count']").innerText // n drafts
+  return parseInt(draftsText)
 }
 
 async function deleteAllDrafts() {
